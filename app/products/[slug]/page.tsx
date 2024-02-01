@@ -9,8 +9,9 @@ import OverallRating, { RatingLevel } from "@/components/product/rating";
 import CommentList from "@/components/product/comments";
 import RelatedProducts from "@/components/product/related-products";
 import Link from "next/link";
+import { SlugProp } from "@/types";
 
-function Page({ slug }: { slug: string }) {
+function Page({ params }: SlugProp) {
 	const detail = [{}];
 	const features = [
 		{ icon: Icons.deliveryTruck, title: "Free delivery", value: "1-2 day" },

@@ -39,3 +39,7 @@ export type RatingLevel = {
 	grade: string;
 	value: number;
 };
+
+export type SlugProp = {
+	params: { slug: string };
+};
