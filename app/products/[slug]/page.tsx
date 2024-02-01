@@ -8,6 +8,7 @@ import { Tab } from "@/components/ui/tab";
 import OverallRating, { RatingLevel } from "@/components/product/rating";
 import CommentList from "@/components/product/comments";
 import RelatedProducts from "@/components/product/related-products";
+import Link from "next/link";
 
 function Page({ slug }: { slug: string }) {
 	const detail = [{}];
@@ -74,8 +75,12 @@ function Page({ slug }: { slug: string }) {
 						>
 							Add to Wishlist
 						</Button>
-						<Button variant="fill" className="flex-1 min-w-[136px]">
+						<Button
+							variant="fill"
+							className="relative flex-1 min-w-[136px]"
+						>
 							Add to Cart
+							<Link href="/cart" className="absolute inset-0" />
 						</Button>
 					</div>
 					<div className="flex gap-x-8">

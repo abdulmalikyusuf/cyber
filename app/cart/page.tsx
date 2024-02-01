@@ -1,6 +1,7 @@
 import CartProduct from "@/components/cart/product";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 import React from "react";
 
 function ShoppingPage() {
@@ -100,9 +101,11 @@ function ShoppingPage() {
 								</div>
 							</div>
 							<div className="mt-12">
-								<Button className="w-full" variant="fill">
-									Checkout
-								</Button>
+								<Link href="/checkout">
+									<Button className="w-full" variant="fill">
+										Checkout
+									</Button>
+								</Link>
 							</div>
 						</div>
 					</div>

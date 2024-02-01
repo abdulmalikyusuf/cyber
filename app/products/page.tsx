@@ -27,7 +27,7 @@ function Page() {
 	const product = products.at(1);
 	return (
 		<div className="mt-6 mb-14 flex gap-x-8">
-			<Filter className="hidden" />
+			<Filter className="max-md:hidden" />
 			<div className="flex flex-col gap-10">
 				<div className="flex flex-col gap-6">
 					<div className="flex flex-wrap items-center lg:justify-between max-sm:gap-y-6 max-sm:gap-x-4">

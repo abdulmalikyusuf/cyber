@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function ProductCard({ img, name, price }: Product) {
 	return (
-		<div className="bg-[#f6f6f6] w-[164px] lg:w-[268px] rounded-lg py-6 px-3 lg:px-4 text-main-black text-center font-sf">
+		<div className="relative bg-[#f6f6f6] w-[164px] lg:w-[268px] rounded-lg py-6 px-3 lg:px-4 text-main-black text-center font-sf">
 			<div className="flex flex-col items-center gap-y-2 lg:gap-y-4">
 				{/* <button
 					onClick={() => setLiked(!liked)}
@@ -38,22 +38,19 @@ function ProductCard({ img, name, price }: Product) {
 					alt={name}
 					className="max-lg:h-[104px] max-lg:w-[104px]"
 				/>
-				<Link
-					href={`products/${name.split(" ").at(1)}`}
-					className="font-medium line-clamp-2 h-12"
-				>
-					{name}
-				</Link>
+				<p className="font-medium line-clamp-2 h-12">{name}</p>
 				<h5 className="max-lg:mt-2 font-semibold text-2xl leading-none tracking-[0.72px]">
 					{formatPrice(price)}
 				</h5>
-				<Button
-					className="mt-2 max-lg:px-0 max-lg:w-full"
-					variant="fill"
-					size="sm"
-				>
-					Buy Now
-				</Button>
+				<Link href={`products/${name.split(" ").at(1)}`} className="">
+					<Button
+						className="mt-2 max-lg:px-0 max-lg:w-full"
+						variant="fill"
+						size="sm"
+					>
+						Buy Now
+					</Button>
+				</Link>
 			</div>
 		</div>
 	);
